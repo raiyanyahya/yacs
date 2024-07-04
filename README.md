@@ -1,7 +1,7 @@
 # yacs
 Yet another credential store 🔐
 
-`yacs`is a command-line tool that allows you to securely store, manage, and retrieve secrets locally in an encrypted JSON file. This tool uses AES encryption with a master password to ensure your secrets are kept safe.
+`yacs` is a command-line tool that allows you to securely store, manage, and retrieve secrets locally in an encrypted JSON file. This tool uses AES encryption with a master password to ensure your secrets are kept safe.
 
 ## Features
 
