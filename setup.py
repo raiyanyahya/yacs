@@ -28,7 +28,7 @@ def get_version():
 
 
 setup(
-    name="yacs",
+    name="yacs-cli",
     python_requires=">3.7",
     options={"bdist_wheel": {"universal": "1"}},
     version=get_version(),
