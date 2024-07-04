@@ -23,50 +23,50 @@ The Local Secrets Manager uses AES encryption with a key derived from your maste
 ## Usage
 Install the command line interface via the cli.
 
-    ```
-    pip install yacs-cli
-    ```
+```
+pip install yacs-cli
+```
 
 After installing you should be able to see the below when you run `yacs`.
-    ```
-    @raiyanyahya ➜ /workspaces/yacs (master) $ yacs
-    Usage: yacs [OPTIONS] COMMAND [ARGS]...
+```
+@raiyanyahya ➜ /workspaces/yacs (master) $ yacs
+Usage: yacs [OPTIONS] COMMAND [ARGS]...
 
-    A cli to provision and manage local developer environments.
+A cli to provision and manage local developer environments.
 
-    Options:
-    --version  Show the version and exit.
-    --help     Show this message and exit.
+Options:
+--version  Show the version and exit.
+--help     Show this message and exit.
 
-    Commands:
-    get    Get a secret from the credential store.
-    init   Initialize an empty local credstore.
-    put    Add a secret to the credential store.
-    reset  Delete the credstore and start from scratch.
-    view   View all keys and their descriptions.
-    ```
+Commands:
+get    Get a secret from the credential store.
+init   Initialize an empty local credstore.
+put    Add a secret to the credential store.
+reset  Delete the credstore and start from scratch.
+view   View all keys and their descriptions.
+```
 ### Initialize the store
 
-    ```
-    yacs init
-    ```
+```
+yacs init
+```
 
 ### Add a secret
 
-    ```
-    yacs put /mykey "description" mysecretstring
-    ```
+```
+yacs put /mykey "description" mysecretstring
+```
 
 ### Get a secret
 
-    ```
-    yacs get /mykey
-    ```
+```
+yacs get /mykey
+```
 ### View all keyand descriptions
 
-    ```
-    yacs view
-    ```
+```
+yacs view
+```
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
