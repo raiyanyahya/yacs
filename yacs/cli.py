@@ -1,5 +1,5 @@
 import click
-from yacs import inititialize, reset
+from yacs import inititialize, reset, put, get, view
 @click.group()
 @click.version_option()
 def cli() -> None:
@@ -9,3 +9,6 @@ def cli() -> None:
 
 cli.add_command(inititialize.initialize)
 cli.add_command(reset.reset)
+cli.add_command(put.put)
+cli.add_command(get.get)
+cli.add_command(view.view)
