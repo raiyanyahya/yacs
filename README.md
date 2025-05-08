@@ -54,15 +54,15 @@ yacs init
 ### Add a secret
 
 ```
-yacs put /mykey "description" mysecretstring
+yacs put /mykeyname "description of the secret"
 ```
 
 ### Get a secret
 
 ```
-yacs get /mykey
+yacs get /mykeyname
 ```
-### View all keyand descriptions
+### View all key and descriptions
 
 ```
 yacs view

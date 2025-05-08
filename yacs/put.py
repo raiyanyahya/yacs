@@ -13,7 +13,7 @@ def put_secret(filename, key, description, secret, secret_type):
     credstore_path = get_credstore_path(filename)
 
     if not credstore_path.exists():
-        console.print(f"[bold red]Error:[/bold red] {credstore_path} does not exist.", style="bold red")
+        console.print(f"[bold red]Error:[/bold red] {credstore_path} does not exist. Initialize a new store.", style="bold red")
         return
 
     password = Prompt.ask("Enter master password", password=True)
@@ -50,8 +50,8 @@ def put_secret(filename, key, description, secret, secret_type):
 @click.option('--filename', default='credstore.json', help='The name of the credential store file.')
 @click.argument('key')
 @click.argument('description')
-@click.argument('secret')
 @click.option('--type', 'secret_type', type=click.Choice(['string', 'binary']), default='string', help='The type of the secret: string or binary.')
-def put(filename, key, description, secret, secret_type):
+def put(filename, key, description, secret_type):
     """Add a secret to the credential store."""
+    secret = Prompt.ask("Enter the secret", password=True)
     put_secret(filename, key, description, secret, secret_type)
